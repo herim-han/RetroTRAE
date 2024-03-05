@@ -1,4 +1,6 @@
-## training_example : ./run.sh
+## test example ::
+### training_command : ./run.sh
+```
 python train_gru.py     --sp_model ../data/sp/ais_vocab_25.model \
                         --train_ratio 1.0 \
                         --valid_ratio 1.0 \
@@ -12,8 +14,10 @@ python train_gru.py     --sp_model ../data/sp/ais_vocab_25.model \
                         --masking_ratio 0 \
                         --valid_filename ../data/src/ais_vocab_25_valid.txt \
                         --train_filename ../data/src/ais_vocab_25_train.txt 
+```
 
-## optimization_example : ./run_opt.sh
+### optimization_command : ./run_opt.sh
+```
 python optimize.py      --sp_model ../data/sp/ais_vocab_25.model \
                         --ckpt_path cvae_ckpt_file/run_ais_25/epoch=29.ckpt \
                         --csv_path testtest \
@@ -22,3 +26,4 @@ python optimize.py      --sp_model ../data/sp/ais_vocab_25.model \
                         --target pdk4 \
                         --accelerator gpu  --devices 1 \
                         --opt_bound 1.0
+```
